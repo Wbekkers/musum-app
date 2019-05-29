@@ -1,26 +1,40 @@
 function doesNotPassAllValidations(name, msg) {
-    if (!name || !msg) {
-      alert('You forgot to fill in your name or message!')
-      return true;
-    }
+    if (!name && !msg) {
+        alert('You forgot to fill in your name or message!')
+        return true;
+      }
+
+    if (!name) {
+        alert('You forgot to fill in your name!')
+        return true;
+      }
+
+    if (!msg) {
+        alert('You forgot to fill in your message!')
+        return true;
+      }
   
     if(msg.length > 280) {
       alert('Your comment is too long')
       return true
-    }
+     }
   
     return false
   }
 
+function capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+}
 
-// add event handler
-function submitComment() {
+
+   // add event handler
+  function submitComment() {
 
     // gather data
-    const inputField = document.getElementById('name')
-    const name = inputField.value
-    const textArea = document.getElementById('msg')
-    const msg = textArea.value
+  const inputField = document.getElementById('name')
+  const name = capitalizeFirstLetter(inputField.value)
+  const textArea = document.getElementById('msg')
+  const msg = textArea.value
     
     if(doesNotPassAllValidations(name, msg)){
         return null
