@@ -1,3 +1,4 @@
+ // form validations
 function doesNotPassAllValidations(name, msg) {
     if (!name && !msg) {
         alert('You forgot to fill in your name or message!')
@@ -22,19 +23,22 @@ function doesNotPassAllValidations(name, msg) {
     return false
   }
 
+  // capitalize first letter name
 function capitalizeFirstLetter(string) {
     return string[0].toUpperCase() + string.slice(1);
 }
 
-
    // add event handler
-  function submitComment() {
+function submitComment() {
+
 
     // gather data
   const inputField = document.getElementById('name')
   const name = capitalizeFirstLetter(inputField.value)
   const textArea = document.getElementById('msg')
   const msg = textArea.value
+
+  console.log(name)
     
     if(doesNotPassAllValidations(name, msg)){
         return null
@@ -60,3 +64,5 @@ function capitalizeFirstLetter(string) {
   inputField.value = null
   textArea.value = null
 }
+
+
