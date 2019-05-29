@@ -3,6 +3,7 @@
     <head>
         <title>Detail Page Museum Guide</title>
         <link rel="stylesheet" type="text/css" media="screen" href="detail-page.css">
+        <script src="detail-page.js"></script>
 </head>
 <body>
     <main>
@@ -12,8 +13,32 @@
                 <a href="./pages/detail-page.html"><img class="artObject" 
                     src="https://files.voetbalprimeur.nl/news/2019/05/06/v2_large_32764de471da5a6cf4f0d09c5395982b39523d6b.jpg"></a>
                 <a href="./pages/detail-page.html"><img class="artObject" 
-                    src="https://lh3.googleusercontent.com/inIJ6TyL4uYlpwOqHFGCCJ311jiFAnNQRMuitYedAVZvnFlAsjdKtIfAkhIQyZw-3ArH-oNdOQnxOQTKJEu2SuX_O-2f=s0"></a>
+                    src="https://sportnieuws.nl/app/uploads/2019/04/37526566_BSR_AGENCY-756x422.jpg"></a>
+
+                    <section id='comments'>
+                            <h2>Comments</h2>
+                        
+                            <section class='comment'>
+                              <h3>Arien said:</h3>
+                              <p>"This is definitely one of my favorites!"</p>
+                            </section>
+                          </section>
+                        
+                          <form onsubmit="submitComment(); return false">
+                            <div class="formSection">
+                              <label for="name">Name:</label>
+                              <input type="text" id="name">
+                            </div>
+                            <div class="formSection">
+                              <label for="msg">Message:</label>
+                              <textarea id="msg"></textarea>
+                            </div>
+                            <div class="button">
+                              <button type="default">Post your comment</button>
+                            </div>
+                          </form>
         </section>
     </main>
     </body>
 </html>
+
